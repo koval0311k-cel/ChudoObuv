@@ -836,5 +836,7 @@ if __name__ == '__main__':
 
 
 def total_sum(products):
-    """Версия 1: сумма цен без учёта количества."""
-    return sum(p['price'] for p in products)
+
+def total_sum(products):
+    """Сумма цен с учётом количества."""
+    return sum(p['price'] * p['quantity'] for p in products)
