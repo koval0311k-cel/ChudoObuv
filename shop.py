@@ -1,7 +1,7 @@
-# ============================================================
-# Проект «СпортТовары». Отработка Python.
-# Файл shop.py — бизнес-логика интернет-магазина.
-# Все задания 1–12 выполнены в одном файле (как требует задание).
+﻿# ============================================================
+# РџСЂРѕРµРєС‚ В«РЎРїРѕСЂС‚РўРѕРІР°СЂС‹В». РћС‚СЂР°Р±РѕС‚РєР° Python.
+# Р¤Р°Р№Р» shop.py вЂ” Р±РёР·РЅРµСЃ-Р»РѕРіРёРєР° РёРЅС‚РµСЂРЅРµС‚-РјР°РіР°Р·РёРЅР°.
+# Р’СЃРµ Р·Р°РґР°РЅРёСЏ 1вЂ“12 РІС‹РїРѕР»РЅРµРЅС‹ РІ РѕРґРЅРѕРј С„Р°Р№Р»Рµ (РєР°Рє С‚СЂРµР±СѓРµС‚ Р·Р°РґР°РЅРёРµ).
 # ============================================================
 
 import json
@@ -10,14 +10,14 @@ from datetime import datetime
 
 
 # ============================================================
-# ЗАДАНИЕ 1. Формирование каталога
+# Р—РђР”РђРќРР• 1. Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РєР°С‚Р°Р»РѕРіР°
 # ============================================================
 
 products = [
     {
         'id': 1,
-        'name': 'Кроссовки Run',
-        'category': 'Обувь',
+        'name': 'РљСЂРѕСЃСЃРѕРІРєРё Run',
+        'category': 'РћР±СѓРІСЊ',
         'brand': 'Nike',
         'price': 8990.0,
         'sizes': {40: 2, 41: 3, 42: 1},
@@ -26,8 +26,8 @@ products = [
     },
     {
         'id': 2,
-        'name': 'Кеды Classic',
-        'category': 'Обувь',
+        'name': 'РљРµРґС‹ Classic',
+        'category': 'РћР±СѓРІСЊ',
         'brand': 'Adidas',
         'price': 7490.0,
         'sizes': {39: 1, 40: 1, 41: 1},
@@ -36,8 +36,8 @@ products = [
     },
     {
         'id': 3,
-        'name': 'Футболка Sport',
-        'category': 'Одежда',
+        'name': 'Р¤СѓС‚Р±РѕР»РєР° Sport',
+        'category': 'РћРґРµР¶РґР°',
         'brand': 'Puma',
         'price': 2490.0,
         'sizes': {'S': 5, 'M': 7, 'L': 4},
@@ -46,8 +46,8 @@ products = [
     },
     {
         'id': 4,
-        'name': 'Шорты Run',
-        'category': 'Одежда',
+        'name': 'РЁРѕСЂС‚С‹ Run',
+        'category': 'РћРґРµР¶РґР°',
         'brand': 'Reebok',
         'price': 1990.0,
         'sizes': {'S': 3, 'M': 6, 'L': 2},
@@ -56,8 +56,8 @@ products = [
     },
     {
         'id': 5,
-        'name': 'Рюкзак City',
-        'category': 'Аксессуары',
+        'name': 'Р СЋРєР·Р°Рє City',
+        'category': 'РђРєСЃРµСЃСЃСѓР°СЂС‹',
         'brand': 'Nike',
         'price': 4590.0,
         'sizes': {'OneSize': 8},
@@ -66,8 +66,8 @@ products = [
     },
     {
         'id': 6,
-        'name': 'Кепка Sport',
-        'category': 'Аксессуары',
+        'name': 'РљРµРїРєР° Sport',
+        'category': 'РђРєСЃРµСЃСЃСѓР°СЂС‹',
         'brand': 'Adidas',
         'price': 1590.0,
         'sizes': {'OneSize': 12},
@@ -76,8 +76,8 @@ products = [
     },
     {
         'id': 7,
-        'name': 'Куртка Wind',
-        'category': 'Одежда',
+        'name': 'РљСѓСЂС‚РєР° Wind',
+        'category': 'РћРґРµР¶РґР°',
         'brand': 'The North Face',
         'price': 12990.0,
         'sizes': {'M': 2, 'L': 3, 'XL': 1},
@@ -86,8 +86,8 @@ products = [
     },
     {
         'id': 8,
-        'name': 'Носки Sport (3 пары)',
-        'category': 'Аксессуары',
+        'name': 'РќРѕСЃРєРё Sport (3 РїР°СЂС‹)',
+        'category': 'РђРєСЃРµСЃСЃСѓР°СЂС‹',
         'brand': 'Puma',
         'price': 890.0,
         'sizes': {'OneSize': 20},
@@ -96,8 +96,8 @@ products = [
     },
     {
         'id': 9,
-        'name': 'Кроссовки Trail',
-        'category': 'Обувь',
+        'name': 'РљСЂРѕСЃСЃРѕРІРєРё Trail',
+        'category': 'РћР±СѓРІСЊ',
         'brand': 'Salomon',
         'price': 11990.0,
         'sizes': {41: 2, 42: 2, 43: 1},
@@ -106,8 +106,8 @@ products = [
     },
     {
         'id': 10,
-        'name': 'Бутылка для воды',
-        'category': 'Аксессуары',
+        'name': 'Р‘СѓС‚С‹Р»РєР° РґР»СЏ РІРѕРґС‹',
+        'category': 'РђРєСЃРµСЃСЃСѓР°СЂС‹',
         'brand': 'Nike',
         'price': 1290.0,
         'sizes': {'OneSize': 15},
@@ -118,102 +118,102 @@ products = [
 
 
 # ============================================================
-# ЗАДАНИЕ 2. Функции-помощники
+# Р—РђР”РђРќРР• 2. Р¤СѓРЅРєС†РёРё-РїРѕРјРѕС‰РЅРёРєРё
 # ============================================================
 
 def total_quantity(product):
-    """Суммарное количество единиц товара по всем размерам."""
+    """РЎСѓРјРјР°СЂРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РµРґРёРЅРёС† С‚РѕРІР°СЂР° РїРѕ РІСЃРµРј СЂР°Р·РјРµСЂР°Рј."""
     return sum(product['sizes'].values())
 
 
 def avg_price(products):
-    """Средняя цена по каталогу, округлённая до 2 знаков."""
+    """РЎСЂРµРґРЅСЏСЏ С†РµРЅР° РїРѕ РєР°С‚Р°Р»РѕРіСѓ, РѕРєСЂСѓРіР»С‘РЅРЅР°СЏ РґРѕ 2 Р·РЅР°РєРѕРІ."""
     if not products:
         return 0.0
     return round(sum(p['price'] for p in products) / len(products), 2)
 
 
 def get_categories(products):
-    """Множество уникальных категорий."""
+    """РњРЅРѕР¶РµСЃС‚РІРѕ СѓРЅРёРєР°Р»СЊРЅС‹С… РєР°С‚РµРіРѕСЂРёР№."""
     return set(p['category'] for p in products)
 
 
 def get_brands(products):
-    """Отсортированный список уникальных брендов."""
+    """РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ СЃРїРёСЃРѕРє СѓРЅРёРєР°Р»СЊРЅС‹С… Р±СЂРµРЅРґРѕРІ."""
     return sorted(set(p['brand'] for p in products))
 
 
 def is_low_stock(product, threshold=3):
-    """True, если общее количество товара ≤ порога."""
+    """True, РµСЃР»Рё РѕР±С‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРІР°СЂР° в‰¤ РїРѕСЂРѕРіР°."""
     return total_quantity(product) <= threshold
 
 
 # ============================================================
-# ЗАДАНИЕ 3. Сортировка и топы
+# Р—РђР”РђРќРР• 3. РЎРѕСЂС‚РёСЂРѕРІРєР° Рё С‚РѕРїС‹
 # ============================================================
 
 def demo_sorting():
-    """Демонстрация сортировок (задание 3)."""
-    # 3.1. Топ-3 по цене (убывание)
+    """Р”РµРјРѕРЅСЃС‚СЂР°С†РёСЏ СЃРѕСЂС‚РёСЂРѕРІРѕРє (Р·Р°РґР°РЅРёРµ 3)."""
+    # 3.1. РўРѕРї-3 РїРѕ С†РµРЅРµ (СѓР±С‹РІР°РЅРёРµ)
     top_by_price = sorted(products, key=lambda p: p['price'], reverse=True)[:3]
-    print("Топ-3 товара по цене:")
+    print("РўРѕРї-3 С‚РѕРІР°СЂР° РїРѕ С†РµРЅРµ:")
     for p in top_by_price:
-        print(f"  {p['name']} — {p['price']} руб.")
+        print(f"  {p['name']} вЂ” {p['price']} СЂСѓР±.")
 
-    # 3.2. Сортировка по рейтингу (убывание), при равенстве — по цене (возрастание)
+    # 3.2. РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ СЂРµР№С‚РёРЅРіСѓ (СѓР±С‹РІР°РЅРёРµ), РїСЂРё СЂР°РІРµРЅСЃС‚РІРµ вЂ” РїРѕ С†РµРЅРµ (РІРѕР·СЂР°СЃС‚Р°РЅРёРµ)
     sorted_by_rating = sorted(products, key=lambda p: (-p['rating'], p['price']))
-    print("\nТовары по рейтингу (при равенстве — по цене):")
+    print("\nРўРѕРІР°СЂС‹ РїРѕ СЂРµР№С‚РёРЅРіСѓ (РїСЂРё СЂР°РІРµРЅСЃС‚РІРµ вЂ” РїРѕ С†РµРЅРµ):")
     for p in sorted_by_rating:
-        print(f"  {p['rating']} — {p['name']} ({p['price']} руб.)")
+        print(f"  {p['rating']} вЂ” {p['name']} ({p['price']} СЂСѓР±.)")
 
-    # 3.3. Сортировка по дате поступления: сначала новые
+    # 3.3. РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ РґР°С‚Рµ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ: СЃРЅР°С‡Р°Р»Р° РЅРѕРІС‹Рµ
     sorted_by_date = sorted(
         products,
         key=lambda p: datetime.strptime(p['created_at'], '%Y-%m-%d'),
         reverse=True,
     )
-    print("\nТовары по дате поступления (сначала новые):")
+    print("\nРўРѕРІР°СЂС‹ РїРѕ РґР°С‚Рµ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ (СЃРЅР°С‡Р°Р»Р° РЅРѕРІС‹Рµ):")
     for p in sorted_by_date:
-        print(f"  {p['created_at']} — {p['name']}")
+        print(f"  {p['created_at']} вЂ” {p['name']}")
 
-    # 3.4. Сортировка по названию (алфавит)
+    # 3.4. РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ РЅР°Р·РІР°РЅРёСЋ (Р°Р»С„Р°РІРёС‚)
     sorted_by_name = sorted(products, key=lambda p: p['name'])
-    print("\nТовары по алфавиту:")
+    print("\nРўРѕРІР°СЂС‹ РїРѕ Р°Р»С„Р°РІРёС‚Сѓ:")
     for p in sorted_by_name:
         print(f"  {p['name']}")
 
 
 # ============================================================
-# ЗАДАНИЕ 4. Фильтрация
+# Р—РђР”РђРќРР• 4. Р¤РёР»СЊС‚СЂР°С†РёСЏ
 # ============================================================
 
 def demo_filtering():
-    """Демонстрация фильтрации (задание 4)."""
-    # 4.1. Товары дешевле 5000 руб. и с рейтингом ≥ 4.5
+    """Р”РµРјРѕРЅСЃС‚СЂР°С†РёСЏ С„РёР»СЊС‚СЂР°С†РёРё (Р·Р°РґР°РЅРёРµ 4)."""
+    # 4.1. РўРѕРІР°СЂС‹ РґРµС€РµРІР»Рµ 5000 СЂСѓР±. Рё СЃ СЂРµР№С‚РёРЅРіРѕРј в‰Ґ 4.5
     cheap_and_high_rated = [
         p for p in products
         if p['price'] < 5000 and p['rating'] >= 4.5
     ]
-    print("\nТовары дешевле 5000 руб. и с рейтингом ≥ 4.5:")
+    print("\nРўРѕРІР°СЂС‹ РґРµС€РµРІР»Рµ 5000 СЂСѓР±. Рё СЃ СЂРµР№С‚РёРЅРіРѕРј в‰Ґ 4.5:")
     for p in cheap_and_high_rated:
-        print(f"  {p['name']} — {p['price']} руб., рейтинг {p['rating']}")
+        print(f"  {p['name']} вЂ” {p['price']} СЂСѓР±., СЂРµР№С‚РёРЅРі {p['rating']}")
 
-    # 4.2. Товары категории «Обувь» или «Аксессуары»
+    # 4.2. РўРѕРІР°СЂС‹ РєР°С‚РµРіРѕСЂРёРё В«РћР±СѓРІСЊВ» РёР»Рё В«РђРєСЃРµСЃСЃСѓР°СЂС‹В»
     shoes_or_accessories = [
         p for p in products
-        if p['category'] in ('Обувь', 'Аксессуары')
+        if p['category'] in ('РћР±СѓРІСЊ', 'РђРєСЃРµСЃСЃСѓР°СЂС‹')
     ]
-    print("\nТовары категорий «Обувь» или «Аксессуары»:")
+    print("\nРўРѕРІР°СЂС‹ РєР°С‚РµРіРѕСЂРёР№ В«РћР±СѓРІСЊВ» РёР»Рё В«РђРєСЃРµСЃСЃСѓР°СЂС‹В»:")
     for p in shoes_or_accessories:
         print(f"  {p['name']} ({p['category']})")
 
-    # 4.3. Товары, у которых есть размер 42
+    # 4.3. РўРѕРІР°СЂС‹, Сѓ РєРѕС‚РѕСЂС‹С… РµСЃС‚СЊ СЂР°Р·РјРµСЂ 42
     has_size_42 = [p for p in products if 42 in p['sizes']]
-    print("\nТовары с размером 42:")
+    print("\nРўРѕРІР°СЂС‹ СЃ СЂР°Р·РјРµСЂРѕРј 42:")
     for p in has_size_42:
-        print(f"  {p['name']} — размеры: {list(p['sizes'].keys())}")
+        print(f"  {p['name']} вЂ” СЂР°Р·РјРµСЂС‹: {list(p['sizes'].keys())}")
 
-    # 4.4. Товары, поступившие за последние 30 дней
+    # 4.4. РўРѕРІР°СЂС‹, РїРѕСЃС‚СѓРїРёРІС€РёРµ Р·Р° РїРѕСЃР»РµРґРЅРёРµ 30 РґРЅРµР№
     today = datetime.now()
     recent = []
     for p in products:
@@ -222,39 +222,39 @@ def demo_filtering():
         if days_passed <= 30:
             recent.append(p)
 
-    print(f"\nТовары, поступившие за последние 30 дней (сегодня {today.strftime('%Y-%m-%d')}):")
+    print(f"\nРўРѕРІР°СЂС‹, РїРѕСЃС‚СѓРїРёРІС€РёРµ Р·Р° РїРѕСЃР»РµРґРЅРёРµ 30 РґРЅРµР№ (СЃРµРіРѕРґРЅСЏ {today.strftime('%Y-%m-%d')}):")
     for p in recent:
         date_obj = datetime.strptime(p['created_at'], '%Y-%m-%d')
         days_passed = (today - date_obj).days
-        print(f"  {p['name']} — {p['created_at']} ({days_passed} дней назад)")
+        print(f"  {p['name']} вЂ” {p['created_at']} ({days_passed} РґРЅРµР№ РЅР°Р·Р°Рґ)")
 
-    # 4.5. Товары с низким остатком (≤ 3 шт. суммарно)
+    # 4.5. РўРѕРІР°СЂС‹ СЃ РЅРёР·РєРёРј РѕСЃС‚Р°С‚РєРѕРј (в‰¤ 3 С€С‚. СЃСѓРјРјР°СЂРЅРѕ)
     low_stock = [p for p in products if total_quantity(p) <= 3]
-    print("\nТовары с низким остатком (≤ 3 шт.):")
+    print("\nРўРѕРІР°СЂС‹ СЃ РЅРёР·РєРёРј РѕСЃС‚Р°С‚РєРѕРј (в‰¤ 3 С€С‚.):")
     for p in low_stock:
-        print(f"  {p['name']} — {total_quantity(p)} шт.")
+        print(f"  {p['name']} вЂ” {total_quantity(p)} С€С‚.")
 
 
 # ============================================================
-# ЗАДАНИЕ 5. Поиск
+# Р—РђР”РђРќРР• 5. РџРѕРёСЃРє
 # ============================================================
 
 def search_by_name(products, query):
-    """Поиск товаров по подстроке в названии."""
+    """РџРѕРёСЃРє С‚РѕРІР°СЂРѕРІ РїРѕ РїРѕРґСЃС‚СЂРѕРєРµ РІ РЅР°Р·РІР°РЅРёРё."""
     query = query.lower()
     return [p for p in products if query in p['name'].lower()]
 
 
 def search_by_brand(products, brand):
-    """Поиск товаров по бренду."""
+    """РџРѕРёСЃРє С‚РѕРІР°СЂРѕРІ РїРѕ Р±СЂРµРЅРґСѓ."""
     brand = brand.lower()
     return [p for p in products if p['brand'].lower() == brand]
 
 
 def search_advanced(products, query, category=None, min_price=None, max_price=None):
     """
-    Комбинированный поиск.
-    Параметры, равные None, не учитываются.
+    РљРѕРјР±РёРЅРёСЂРѕРІР°РЅРЅС‹Р№ РїРѕРёСЃРє.
+    РџР°СЂР°РјРµС‚СЂС‹, СЂР°РІРЅС‹Рµ None, РЅРµ СѓС‡РёС‚С‹РІР°СЋС‚СЃСЏ.
     """
     query = query.lower()
     result = []
@@ -272,33 +272,33 @@ def search_advanced(products, query, category=None, min_price=None, max_price=No
 
 
 def highlight(products):
-    """Возвращает список названий товаров с низким остатком."""
+    """Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРїРёСЃРѕРє РЅР°Р·РІР°РЅРёР№ С‚РѕРІР°СЂРѕРІ СЃ РЅРёР·РєРёРј РѕСЃС‚Р°С‚РєРѕРј."""
     return [p['name'] for p in products if total_quantity(p) <= 3]
 
 
 def demo_search():
-    """Демонстрация поиска (задание 5)."""
-    print("\nПоиск по названию 'кросс':")
-    for p in search_by_name(products, 'кросс'):
+    """Р”РµРјРѕРЅСЃС‚СЂР°С†РёСЏ РїРѕРёСЃРєР° (Р·Р°РґР°РЅРёРµ 5)."""
+    print("\nРџРѕРёСЃРє РїРѕ РЅР°Р·РІР°РЅРёСЋ 'РєСЂРѕСЃСЃ':")
+    for p in search_by_name(products, 'РєСЂРѕСЃСЃ'):
         print(f"  {p['name']}")
 
-    print("\nПоиск по бренду 'nike':")
+    print("\nРџРѕРёСЃРє РїРѕ Р±СЂРµРЅРґСѓ 'nike':")
     for p in search_by_brand(products, 'nike'):
         print(f"  {p['name']} ({p['brand']})")
 
-    print("\nКомбинированный поиск: 'кросс', категория 'Обувь', цена от 8000 до 12000:")
-    for p in search_advanced(products, 'кросс', category='Обувь', min_price=8000, max_price=12000):
-        print(f"  {p['name']} — {p['price']} руб.")
+    print("\nРљРѕРјР±РёРЅРёСЂРѕРІР°РЅРЅС‹Р№ РїРѕРёСЃРє: 'РєСЂРѕСЃСЃ', РєР°С‚РµРіРѕСЂРёСЏ 'РћР±СѓРІСЊ', С†РµРЅР° РѕС‚ 8000 РґРѕ 12000:")
+    for p in search_advanced(products, 'РєСЂРѕСЃСЃ', category='РћР±СѓРІСЊ', min_price=8000, max_price=12000):
+        print(f"  {p['name']} вЂ” {p['price']} СЂСѓР±.")
 
-    print(f"\nТовары с низким остатком (highlight): {highlight(products)}")
+    print(f"\nРўРѕРІР°СЂС‹ СЃ РЅРёР·РєРёРј РѕСЃС‚Р°С‚РєРѕРј (highlight): {highlight(products)}")
 
 
 # ============================================================
-# ЗАДАНИЕ 6. Группировка и агрегация
+# Р—РђР”РђРќРР• 6. Р“СЂСѓРїРїРёСЂРѕРІРєР° Рё Р°РіСЂРµРіР°С†РёСЏ
 # ============================================================
 
 def count_by_category(products):
-    """Словарь {категория: количество товаров}."""
+    """РЎР»РѕРІР°СЂСЊ {РєР°С‚РµРіРѕСЂРёСЏ: РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРІР°СЂРѕРІ}."""
     result = {}
     for p in products:
         result[p['category']] = result.get(p['category'], 0) + 1
@@ -306,7 +306,7 @@ def count_by_category(products):
 
 
 def total_stock_by_brand(products):
-    """Словарь {бренд: суммарное количество единиц}."""
+    """РЎР»РѕРІР°СЂСЊ {Р±СЂРµРЅРґ: СЃСѓРјРјР°СЂРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РµРґРёРЅРёС†}."""
     result = {}
     for p in products:
         result[p['brand']] = result.get(p['brand'], 0) + total_quantity(p)
@@ -314,7 +314,7 @@ def total_stock_by_brand(products):
 
 
 def avg_rating_by_category(products):
-    """Словарь {категория: средний рейтинг}."""
+    """РЎР»РѕРІР°СЂСЊ {РєР°С‚РµРіРѕСЂРёСЏ: СЃСЂРµРґРЅРёР№ СЂРµР№С‚РёРЅРі}."""
     sums = {}
     counts = {}
     for p in products:
@@ -325,7 +325,7 @@ def avg_rating_by_category(products):
 
 
 def top_brand_by_stock(products):
-    """Бренд с наибольшим суммарным количеством единиц."""
+    """Р‘СЂРµРЅРґ СЃ РЅР°РёР±РѕР»СЊС€РёРј СЃСѓРјРјР°СЂРЅС‹Рј РєРѕР»РёС‡РµСЃС‚РІРѕРј РµРґРёРЅРёС†."""
     stock = total_stock_by_brand(products)
     if not stock:
         return None
@@ -333,28 +333,28 @@ def top_brand_by_stock(products):
 
 
 def demo_grouping():
-    """Демонстрация группировки и агрегации (задание 6)."""
-    print("\nКоличество товаров по категориям:")
+    """Р”РµРјРѕРЅСЃС‚СЂР°С†РёСЏ РіСЂСѓРїРїРёСЂРѕРІРєРё Рё Р°РіСЂРµРіР°С†РёРё (Р·Р°РґР°РЅРёРµ 6)."""
+    print("\nРљРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРІР°СЂРѕРІ РїРѕ РєР°С‚РµРіРѕСЂРёСЏРј:")
     for cat, count in count_by_category(products).items():
         print(f"  {cat}: {count}")
 
-    print("\nСуммарное количество единиц по брендам:")
+    print("\nРЎСѓРјРјР°СЂРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РµРґРёРЅРёС† РїРѕ Р±СЂРµРЅРґР°Рј:")
     for brand, qty in total_stock_by_brand(products).items():
-        print(f"  {brand}: {qty} шт.")
+        print(f"  {brand}: {qty} С€С‚.")
 
-    print("\nСредний рейтинг по категориям:")
+    print("\nРЎСЂРµРґРЅРёР№ СЂРµР№С‚РёРЅРі РїРѕ РєР°С‚РµРіРѕСЂРёСЏРј:")
     for cat, rating in avg_rating_by_category(products).items():
         print(f"  {cat}: {rating}")
 
-    print(f"\nБренд с наибольшим запасом: {top_brand_by_stock(products)}")
+    print(f"\nР‘СЂРµРЅРґ СЃ РЅР°РёР±РѕР»СЊС€РёРј Р·Р°РїР°СЃРѕРј: {top_brand_by_stock(products)}")
 
 
 # ============================================================
-# ЗАДАНИЕ 7. Корзина с проверкой остатков
+# Р—РђР”РђРќРР• 7. РљРѕСЂР·РёРЅР° СЃ РїСЂРѕРІРµСЂРєРѕР№ РѕСЃС‚Р°С‚РєРѕРІ
 # ============================================================
 
 def find_product_by_id(products, product_id):
-    """Находит товар по id. Возвращает словарь или None."""
+    """РќР°С…РѕРґРёС‚ С‚РѕРІР°СЂ РїРѕ id. Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃР»РѕРІР°СЂСЊ РёР»Рё None."""
     for p in products:
         if p['id'] == product_id:
             return p
@@ -363,19 +363,19 @@ def find_product_by_id(products, product_id):
 
 def add_to_cart(cart, products, product_id, size, quantity):
     """
-    Добавляет товар в корзину с проверками.
-    Возвращает (True/False, сообщение).
+    Р”РѕР±Р°РІР»СЏРµС‚ С‚РѕРІР°СЂ РІ РєРѕСЂР·РёРЅСѓ СЃ РїСЂРѕРІРµСЂРєР°РјРё.
+    Р’РѕР·РІСЂР°С‰Р°РµС‚ (True/False, СЃРѕРѕР±С‰РµРЅРёРµ).
     """
     product = find_product_by_id(products, product_id)
     if product is None:
-        return False, f"Товар с id={product_id} не найден"
+        return False, f"РўРѕРІР°СЂ СЃ id={product_id} РЅРµ РЅР°Р№РґРµРЅ"
 
     if size not in product['sizes']:
-        return False, f"Размер {size} отсутствует у товара '{product['name']}'"
+        return False, f"Р Р°Р·РјРµСЂ {size} РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ Сѓ С‚РѕРІР°СЂР° '{product['name']}'"
 
     available = product['sizes'][size]
     if quantity <= 0:
-        return False, "Количество должно быть больше 0"
+        return False, "РљРѕР»РёС‡РµСЃС‚РІРѕ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 0"
 
     already_in_cart = 0
     for item in cart:
@@ -384,13 +384,13 @@ def add_to_cart(cart, products, product_id, size, quantity):
             break
 
     if already_in_cart + quantity > available:
-        return False, (f"Недостаточно товара на складе. "
-                       f"Доступно: {available}, в корзине: {already_in_cart}")
+        return False, (f"РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ С‚РѕРІР°СЂР° РЅР° СЃРєР»Р°РґРµ. "
+                       f"Р”РѕСЃС‚СѓРїРЅРѕ: {available}, РІ РєРѕСЂР·РёРЅРµ: {already_in_cart}")
 
     for item in cart:
         if item['product_id'] == product_id and item['size'] == size:
             item['quantity'] += quantity
-            return True, f"Количество товара '{product['name']}' увеличено"
+            return True, f"РљРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРІР°СЂР° '{product['name']}' СѓРІРµР»РёС‡РµРЅРѕ"
 
     cart.append({
         'product_id': product_id,
@@ -399,63 +399,63 @@ def add_to_cart(cart, products, product_id, size, quantity):
         'size': size,
         'quantity': quantity,
     })
-    return True, f"Товар '{product['name']}' добавлен в корзину"
+    return True, f"РўРѕРІР°СЂ '{product['name']}' РґРѕР±Р°РІР»РµРЅ РІ РєРѕСЂР·РёРЅСѓ"
 
 
 def remove_from_cart(cart, product_id, size):
-    """Удаляет позицию из корзины."""
+    """РЈРґР°Р»СЏРµС‚ РїРѕР·РёС†РёСЋ РёР· РєРѕСЂР·РёРЅС‹."""
     for i, item in enumerate(cart):
         if item['product_id'] == product_id and item['size'] == size:
             cart.pop(i)
-            return True, f"Позиция '{item['name']}' удалена"
-    return False, "Позиция не найдена в корзине"
+            return True, f"РџРѕР·РёС†РёСЏ '{item['name']}' СѓРґР°Р»РµРЅР°"
+    return False, "РџРѕР·РёС†РёСЏ РЅРµ РЅР°Р№РґРµРЅР° РІ РєРѕСЂР·РёРЅРµ"
 
 
 def update_quantity(cart, products, product_id, size, new_qty):
-    """Изменяет количество с проверкой остатка."""
+    """РР·РјРµРЅСЏРµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃ РїСЂРѕРІРµСЂРєРѕР№ РѕСЃС‚Р°С‚РєР°."""
     product = find_product_by_id(products, product_id)
     if product is None:
-        return False, "Товар не найден"
+        return False, "РўРѕРІР°СЂ РЅРµ РЅР°Р№РґРµРЅ"
 
     if size not in product['sizes']:
-        return False, f"Размер {size} отсутствует"
+        return False, f"Р Р°Р·РјРµСЂ {size} РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚"
 
     if new_qty <= 0:
         return remove_from_cart(cart, product_id, size)
 
     available = product['sizes'][size]
     if new_qty > available:
-        return False, f"Недостаточно товара. Доступно: {available}"
+        return False, f"РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ С‚РѕРІР°СЂР°. Р”РѕСЃС‚СѓРїРЅРѕ: {available}"
 
     for item in cart:
         if item['product_id'] == product_id and item['size'] == size:
             item['quantity'] = new_qty
-            return True, f"Количество изменено на {new_qty}"
-    return False, "Позиция не найдена в корзине"
+            return True, f"РљРѕР»РёС‡РµСЃС‚РІРѕ РёР·РјРµРЅРµРЅРѕ РЅР° {new_qty}"
+    return False, "РџРѕР·РёС†РёСЏ РЅРµ РЅР°Р№РґРµРЅР° РІ РєРѕСЂР·РёРЅРµ"
 
 
 def cart_total(cart):
-    """Сумма позиций корзины."""
+    """РЎСѓРјРјР° РїРѕР·РёС†РёР№ РєРѕСЂР·РёРЅС‹."""
     return sum(item['price'] * item['quantity'] for item in cart)
 
 
 def cart_to_string(cart):
-    """Многострочное текстовое представление корзины."""
+    """РњРЅРѕРіРѕСЃС‚СЂРѕС‡РЅРѕРµ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РєРѕСЂР·РёРЅС‹."""
     if not cart:
-        return "Корзина пуста"
-    lines = ["Корзина:"]
+        return "РљРѕСЂР·РёРЅР° РїСѓСЃС‚Р°"
+    lines = ["РљРѕСЂР·РёРЅР°:"]
     for item in cart:
         lines.append(
-            f"  {item['name']}, размер {item['size']}, "
-            f"{item['quantity']} шт. × {item['price']} = "
-            f"{item['quantity'] * item['price']} руб."
+            f"  {item['name']}, СЂР°Р·РјРµСЂ {item['size']}, "
+            f"{item['quantity']} С€С‚. Г— {item['price']} = "
+            f"{item['quantity'] * item['price']} СЂСѓР±."
         )
-    lines.append(f"Итого: {cart_total(cart)} руб.")
+    lines.append(f"РС‚РѕРіРѕ: {cart_total(cart)} СЂСѓР±.")
     return "\n".join(lines)
 
 
 # ============================================================
-# ЗАДАНИЕ 8. Оформление заказа
+# Р—РђР”РђРќРР• 8. РћС„РѕСЂРјР»РµРЅРёРµ Р·Р°РєР°Р·Р°
 # ============================================================
 
 orders = []
@@ -464,9 +464,9 @@ order_counter = [0]
 
 def create_order(cart, client_name, products):
     """
-    Превращает корзину в заказ.
-    Уменьшает остатки в products.
-    Возвращает заказ или None, если корзина пуста.
+    РџСЂРµРІСЂР°С‰Р°РµС‚ РєРѕСЂР·РёРЅСѓ РІ Р·Р°РєР°Р·.
+    РЈРјРµРЅСЊС€Р°РµС‚ РѕСЃС‚Р°С‚РєРё РІ products.
+    Р’РѕР·РІСЂР°С‰Р°РµС‚ Р·Р°РєР°Р· РёР»Рё None, РµСЃР»Рё РєРѕСЂР·РёРЅР° РїСѓСЃС‚Р°.
     """
     if not cart:
         return None
@@ -503,24 +503,24 @@ def create_order(cart, client_name, products):
 
 
 def print_order(order):
-    """Печатает заказ."""
+    """РџРµС‡Р°С‚Р°РµС‚ Р·Р°РєР°Р·."""
     if order is None:
-        print("Заказ пуст")
+        print("Р—Р°РєР°Р· РїСѓСЃС‚")
         return
-    print(f"Заказ №{order['order_id']} от {order['date']}")
-    print(f"Клиент: {order['client']}")
-    print("Позиции:")
+    print(f"Р—Р°РєР°Р· в„–{order['order_id']} РѕС‚ {order['date']}")
+    print(f"РљР»РёРµРЅС‚: {order['client']}")
+    print("РџРѕР·РёС†РёРё:")
     for item in order['items']:
-        print(f"  {item['name']}, размер {item['size']}, "
-              f"{item['quantity']} шт. × {item['price']} = {item['sum']} руб.")
-    print(f"Итого: {order['total']} руб.")
+        print(f"  {item['name']}, СЂР°Р·РјРµСЂ {item['size']}, "
+              f"{item['quantity']} С€С‚. Г— {item['price']} = {item['sum']} СЂСѓР±.")
+    print(f"РС‚РѕРіРѕ: {order['total']} СЂСѓР±.")
 
 
 def demo_cart_and_orders():
-    """Демонстрация корзины и оформления заказов (задания 7–8)."""
-    # Проверка корзины
+    """Р”РµРјРѕРЅСЃС‚СЂР°С†РёСЏ РєРѕСЂР·РёРЅС‹ Рё РѕС„РѕСЂРјР»РµРЅРёСЏ Р·Р°РєР°Р·РѕРІ (Р·Р°РґР°РЅРёСЏ 7вЂ“8)."""
+    # РџСЂРѕРІРµСЂРєР° РєРѕСЂР·РёРЅС‹
     cart = []
-    print("\n--- Добавление товаров ---")
+    print("\n--- Р”РѕР±Р°РІР»РµРЅРёРµ С‚РѕРІР°СЂРѕРІ ---")
     print(add_to_cart(cart, products, 1, 40, 2))
     print(add_to_cart(cart, products, 1, 40, 1))
     print(add_to_cart(cart, products, 1, 99, 1))
@@ -528,41 +528,41 @@ def demo_cart_and_orders():
     print(add_to_cart(cart, products, 3, 'M', 10))
     print("\n" + cart_to_string(cart))
 
-    print("\n--- Изменение количества ---")
+    print("\n--- РР·РјРµРЅРµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° ---")
     print(update_quantity(cart, products, 1, 40, 5))
     print(update_quantity(cart, products, 3, 'M', 1))
     print("\n" + cart_to_string(cart))
 
-    print("\n--- Удаление позиции ---")
+    print("\n--- РЈРґР°Р»РµРЅРёРµ РїРѕР·РёС†РёРё ---")
     print(remove_from_cart(cart, 1, 40))
     print("\n" + cart_to_string(cart))
 
-    # Оформляем 3 заказа
-    print("\n--- Оформление заказов ---")
+    # РћС„РѕСЂРјР»СЏРµРј 3 Р·Р°РєР°Р·Р°
+    print("\n--- РћС„РѕСЂРјР»РµРЅРёРµ Р·Р°РєР°Р·РѕРІ ---")
     add_to_cart(cart, products, 1, 41, 2)
     add_to_cart(cart, products, 5, 'OneSize', 1)
-    print_order(create_order(cart, 'Иванов И.И.', products))
+    print_order(create_order(cart, 'РРІР°РЅРѕРІ Р.Р.', products))
 
     add_to_cart(cart, products, 3, 'S', 2)
     add_to_cart(cart, products, 8, 'OneSize', 3)
-    print_order(create_order(cart, 'Петров П.П.', products))
+    print_order(create_order(cart, 'РџРµС‚СЂРѕРІ Рџ.Рџ.', products))
 
     add_to_cart(cart, products, 9, 42, 1)
     add_to_cart(cart, products, 10, 'OneSize', 2)
-    print_order(create_order(cart, 'Сидоров С.С.', products))
+    print_order(create_order(cart, 'РЎРёРґРѕСЂРѕРІ РЎ.РЎ.', products))
 
 
 # ============================================================
-# ЗАДАНИЕ 9. Аналитика по заказам
+# Р—РђР”РђРќРР• 9. РђРЅР°Р»РёС‚РёРєР° РїРѕ Р·Р°РєР°Р·Р°Рј
 # ============================================================
 
 def orders_by_client(orders, client_name):
-    """Список заказов клиента."""
+    """РЎРїРёСЃРѕРє Р·Р°РєР°Р·РѕРІ РєР»РёРµРЅС‚Р°."""
     return [o for o in orders if o['client'] == client_name]
 
 
 def orders_by_period(orders, start_date, end_date):
-    """Заказы за период (даты в формате YYYY-MM-DD)."""
+    """Р—Р°РєР°Р·С‹ Р·Р° РїРµСЂРёРѕРґ (РґР°С‚С‹ РІ С„РѕСЂРјР°С‚Рµ YYYY-MM-DD)."""
     result = []
     for o in orders:
         order_date = o['date'][:10]
@@ -572,12 +572,12 @@ def orders_by_period(orders, start_date, end_date):
 
 
 def total_revenue(orders):
-    """Общая выручка по всем заказам."""
+    """РћР±С‰Р°СЏ РІС‹СЂСѓС‡РєР° РїРѕ РІСЃРµРј Р·Р°РєР°Р·Р°Рј."""
     return sum(o['total'] for o in orders)
 
 
 def best_selling_product(orders):
-    """Товар, который чаще всего заказывали (по сумме количеств)."""
+    """РўРѕРІР°СЂ, РєРѕС‚РѕСЂС‹Р№ С‡Р°С‰Рµ РІСЃРµРіРѕ Р·Р°РєР°Р·С‹РІР°Р»Рё (РїРѕ СЃСѓРјРјРµ РєРѕР»РёС‡РµСЃС‚РІ)."""
     counter = {}
     for order in orders:
         for item in order['items']:
@@ -588,42 +588,42 @@ def best_selling_product(orders):
 
 
 def average_order_total(orders):
-    """Средняя сумма заказа."""
+    """РЎСЂРµРґРЅСЏСЏ СЃСѓРјРјР° Р·Р°РєР°Р·Р°."""
     if not orders:
         return 0.0
     return round(total_revenue(orders) / len(orders), 2)
 
 
 def demo_analytics():
-    """Демонстрация аналитики (задание 9)."""
-    print(f"\nВсего заказов: {len(orders)}")
-    print(f"Общая выручка: {total_revenue(orders)} руб.")
-    print(f"Средняя сумма заказа: {average_order_total(orders)} руб.")
-    print(f"Самый продаваемый товар: {best_selling_product(orders)}")
+    """Р”РµРјРѕРЅСЃС‚СЂР°С†РёСЏ Р°РЅР°Р»РёС‚РёРєРё (Р·Р°РґР°РЅРёРµ 9)."""
+    print(f"\nР’СЃРµРіРѕ Р·Р°РєР°Р·РѕРІ: {len(orders)}")
+    print(f"РћР±С‰Р°СЏ РІС‹СЂСѓС‡РєР°: {total_revenue(orders)} СЂСѓР±.")
+    print(f"РЎСЂРµРґРЅСЏСЏ СЃСѓРјРјР° Р·Р°РєР°Р·Р°: {average_order_total(orders)} СЂСѓР±.")
+    print(f"РЎР°РјС‹Р№ РїСЂРѕРґР°РІР°РµРјС‹Р№ С‚РѕРІР°СЂ: {best_selling_product(orders)}")
 
-    print("\nЗаказы клиента 'Иванов И.И.':")
-    for o in orders_by_client(orders, 'Иванов И.И.'):
-        print(f"  Заказ №{o['order_id']} на {o['total']} руб.")
+    print("\nР—Р°РєР°Р·С‹ РєР»РёРµРЅС‚Р° 'РРІР°РЅРѕРІ Р.Р.':")
+    for o in orders_by_client(orders, 'РРІР°РЅРѕРІ Р.Р.'):
+        print(f"  Р—Р°РєР°Р· в„–{o['order_id']} РЅР° {o['total']} СЂСѓР±.")
 
     today_str = datetime.now().strftime('%Y-%m-%d')
-    print(f"\nЗаказы за период {today_str} — {today_str}:")
+    print(f"\nР—Р°РєР°Р·С‹ Р·Р° РїРµСЂРёРѕРґ {today_str} вЂ” {today_str}:")
     for o in orders_by_period(orders, today_str, today_str):
-        print(f"  Заказ №{o['order_id']} от {o['date']} на {o['total']} руб.")
+        print(f"  Р—Р°РєР°Р· в„–{o['order_id']} РѕС‚ {o['date']} РЅР° {o['total']} СЂСѓР±.")
 
 
 # ============================================================
-# ЗАДАНИЕ 11. Работа с файлами (JSON)
+# Р—РђР”РђРќРР• 11. Р Р°Р±РѕС‚Р° СЃ С„Р°Р№Р»Р°РјРё (JSON)
 # ============================================================
 
 def save_orders(orders, filename='orders.json'):
-    """Сохраняет список заказов в JSON."""
+    """РЎРѕС…СЂР°РЅСЏРµС‚ СЃРїРёСЃРѕРє Р·Р°РєР°Р·РѕРІ РІ JSON."""
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(orders, f, ensure_ascii=False, indent=2)
-    print(f"Заказы сохранены в {filename}")
+    print(f"Р—Р°РєР°Р·С‹ СЃРѕС…СЂР°РЅРµРЅС‹ РІ {filename}")
 
 
 def load_orders(filename='orders.json'):
-    """Загружает заказы из JSON. Если файла нет — возвращает []."""
+    """Р—Р°РіСЂСѓР¶Р°РµС‚ Р·Р°РєР°Р·С‹ РёР· JSON. Р•СЃР»Рё С„Р°Р№Р»Р° РЅРµС‚ вЂ” РІРѕР·РІСЂР°С‰Р°РµС‚ []."""
     if not os.path.exists(filename):
         return []
     with open(filename, 'r', encoding='utf-8') as f:
@@ -631,157 +631,157 @@ def load_orders(filename='orders.json'):
 
 
 # ============================================================
-# ЗАДАНИЕ 12. Валидация и обработка ошибок
+# Р—РђР”РђРќРР• 12. Р’Р°Р»РёРґР°С†РёСЏ Рё РѕР±СЂР°Р±РѕС‚РєР° РѕС€РёР±РѕРє
 # ============================================================
 
 def safe_int_input(prompt, default=0):
-    """Безопасный ввод целого числа с обработкой ValueError."""
+    """Р‘РµР·РѕРїР°СЃРЅС‹Р№ РІРІРѕРґ С†РµР»РѕРіРѕ С‡РёСЃР»Р° СЃ РѕР±СЂР°Р±РѕС‚РєРѕР№ ValueError."""
     try:
         return int(input(prompt))
     except ValueError:
-        print("Некорректный ввод. Использую значение по умолчанию.")
+        print("РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ. РСЃРїРѕР»СЊР·СѓСЋ Р·РЅР°С‡РµРЅРёРµ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ.")
         return default
 
 
 # ============================================================
-# ЗАДАНИЕ 10. Мини-CLI (меню в консоли)
+# Р—РђР”РђРќРР• 10. РњРёРЅРё-CLI (РјРµРЅСЋ РІ РєРѕРЅСЃРѕР»Рё)
 # ============================================================
 
 def print_menu():
-    """Печатает меню."""
+    """РџРµС‡Р°С‚Р°РµС‚ РјРµРЅСЋ."""
     print("\n" + "=" * 40)
-    print("МЕНЮ МАГАЗИНА «СПОРТТОВАРЫ»")
+    print("РњР•РќР® РњРђР“РђР—РРќРђ В«РЎРџРћР РўРўРћР’РђР Р«В»")
     print("=" * 40)
-    print("1 - Показать каталог")
-    print("2 - Отфильтровать по категории")
-    print("3 - Поиск по названию")
-    print("4 - Показать товары с низким остатком")
-    print("5 - Добавить в корзину")
-    print("6 - Показать корзину")
-    print("7 - Оформить заказ")
-    print("8 - Показать все заказы")
-    print("9 - Аналитика")
-    print("0 - Выход")
+    print("1 - РџРѕРєР°Р·Р°С‚СЊ РєР°С‚Р°Р»РѕРі")
+    print("2 - РћС‚С„РёР»СЊС‚СЂРѕРІР°С‚СЊ РїРѕ РєР°С‚РµРіРѕСЂРёРё")
+    print("3 - РџРѕРёСЃРє РїРѕ РЅР°Р·РІР°РЅРёСЋ")
+    print("4 - РџРѕРєР°Р·Р°С‚СЊ С‚РѕРІР°СЂС‹ СЃ РЅРёР·РєРёРј РѕСЃС‚Р°С‚РєРѕРј")
+    print("5 - Р”РѕР±Р°РІРёС‚СЊ РІ РєРѕСЂР·РёРЅСѓ")
+    print("6 - РџРѕРєР°Р·Р°С‚СЊ РєРѕСЂР·РёРЅСѓ")
+    print("7 - РћС„РѕСЂРјРёС‚СЊ Р·Р°РєР°Р·")
+    print("8 - РџРѕРєР°Р·Р°С‚СЊ РІСЃРµ Р·Р°РєР°Р·С‹")
+    print("9 - РђРЅР°Р»РёС‚РёРєР°")
+    print("0 - Р’С‹С…РѕРґ")
     print("=" * 40)
 
 
 def show_catalog():
-    """Печатает каталог."""
-    print("\n--- КАТАЛОГ ---")
+    """РџРµС‡Р°С‚Р°РµС‚ РєР°С‚Р°Р»РѕРі."""
+    print("\n--- РљРђРўРђР›РћР“ ---")
     for p in products:
-        print(f"  [{p['id']}] {p['name']} ({p['category']}, {p['brand']}) — "
-              f"{p['price']} руб., рейтинг {p['rating']}, "
-              f"всего {total_quantity(p)} шт.")
+        print(f"  [{p['id']}] {p['name']} ({p['category']}, {p['brand']}) вЂ” "
+              f"{p['price']} СЂСѓР±., СЂРµР№С‚РёРЅРі {p['rating']}, "
+              f"РІСЃРµРіРѕ {total_quantity(p)} С€С‚.")
 
 
 def filter_by_category_cli():
-    """Пункт 2: фильтр по категории."""
-    cat = input("Введите категорию (Обувь/Одежда/Аксессуары): ").strip()
+    """РџСѓРЅРєС‚ 2: С„РёР»СЊС‚СЂ РїРѕ РєР°С‚РµРіРѕСЂРёРё."""
+    cat = input("Р’РІРµРґРёС‚Рµ РєР°С‚РµРіРѕСЂРёСЋ (РћР±СѓРІСЊ/РћРґРµР¶РґР°/РђРєСЃРµСЃСЃСѓР°СЂС‹): ").strip()
     filtered = [p for p in products if p['category'].lower() == cat.lower()]
     if not filtered:
-        print("Товаров в этой категории не найдено.")
+        print("РўРѕРІР°СЂРѕРІ РІ СЌС‚РѕР№ РєР°С‚РµРіРѕСЂРёРё РЅРµ РЅР°Р№РґРµРЅРѕ.")
         return
-    print(f"\nТовары категории '{cat}':")
+    print(f"\nРўРѕРІР°СЂС‹ РєР°С‚РµРіРѕСЂРёРё '{cat}':")
     for p in filtered:
-        print(f"  {p['name']} — {p['price']} руб.")
+        print(f"  {p['name']} вЂ” {p['price']} СЂСѓР±.")
 
 
 def search_cli():
-    """Пункт 3: поиск по названию."""
-    query = input("Введите часть названия: ").strip()
+    """РџСѓРЅРєС‚ 3: РїРѕРёСЃРє РїРѕ РЅР°Р·РІР°РЅРёСЋ."""
+    query = input("Р’РІРµРґРёС‚Рµ С‡Р°СЃС‚СЊ РЅР°Р·РІР°РЅРёСЏ: ").strip()
     found = search_by_name(products, query)
     if not found:
-        print("Ничего не найдено.")
+        print("РќРёС‡РµРіРѕ РЅРµ РЅР°Р№РґРµРЅРѕ.")
         return
-    print("\nРезультаты поиска:")
+    print("\nР РµР·СѓР»СЊС‚Р°С‚С‹ РїРѕРёСЃРєР°:")
     for p in found:
-        print(f"  [{p['id']}] {p['name']} — {p['price']} руб.")
+        print(f"  [{p['id']}] {p['name']} вЂ” {p['price']} СЂСѓР±.")
 
 
 def low_stock_cli():
-    """Пункт 4: товары с низким остатком."""
+    """РџСѓРЅРєС‚ 4: С‚РѕРІР°СЂС‹ СЃ РЅРёР·РєРёРј РѕСЃС‚Р°С‚РєРѕРј."""
     low = [p for p in products if total_quantity(p) <= 3]
     if not low:
-        print("Нет товаров с низким остатком.")
+        print("РќРµС‚ С‚РѕРІР°СЂРѕРІ СЃ РЅРёР·РєРёРј РѕСЃС‚Р°С‚РєРѕРј.")
         return
-    print("\nТовары с низким остатком:")
+    print("\nРўРѕРІР°СЂС‹ СЃ РЅРёР·РєРёРј РѕСЃС‚Р°С‚РєРѕРј:")
     for p in low:
-        print(f"  {p['name']} — {total_quantity(p)} шт.")
+        print(f"  {p['name']} вЂ” {total_quantity(p)} С€С‚.")
 
 
 def add_to_cart_cli(cart):
-    """Пункт 5: добавить товар в корзину."""
+    """РџСѓРЅРєС‚ 5: РґРѕР±Р°РІРёС‚СЊ С‚РѕРІР°СЂ РІ РєРѕСЂР·РёРЅСѓ."""
     show_catalog()
-    pid = safe_int_input("Введите id товара: ")
+    pid = safe_int_input("Р’РІРµРґРёС‚Рµ id С‚РѕРІР°СЂР°: ")
     product = find_product_by_id(products, pid)
     if product is None:
-        print("Товар не найден.")
+        print("РўРѕРІР°СЂ РЅРµ РЅР°Р№РґРµРЅ.")
         return
 
-    print(f"Доступные размеры: {list(product['sizes'].keys())}")
-    size_raw = input("Введите размер: ").strip()
+    print(f"Р”РѕСЃС‚СѓРїРЅС‹Рµ СЂР°Р·РјРµСЂС‹: {list(product['sizes'].keys())}")
+    size_raw = input("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ: ").strip()
 
     try:
         size = int(size_raw)
     except ValueError:
         size = size_raw
 
-    qty = safe_int_input("Введите количество: ", default=1)
+    qty = safe_int_input("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ: ", default=1)
     result, message = add_to_cart(cart, products, pid, size, qty)
     print(message)
 
 
 def show_cart_cli(cart):
-    """Пункт 6: показать корзину."""
+    """РџСѓРЅРєС‚ 6: РїРѕРєР°Р·Р°С‚СЊ РєРѕСЂР·РёРЅСѓ."""
     print("\n" + cart_to_string(cart))
 
 
 def create_order_cli(cart):
-    """Пункт 7: оформить заказ."""
+    """РџСѓРЅРєС‚ 7: РѕС„РѕСЂРјРёС‚СЊ Р·Р°РєР°Р·."""
     if not cart:
-        print("Корзина пуста. Нечего оформлять.")
+        print("РљРѕСЂР·РёРЅР° РїСѓСЃС‚Р°. РќРµС‡РµРіРѕ РѕС„РѕСЂРјР»СЏС‚СЊ.")
         return
     print("\n" + cart_to_string(cart))
-    client = input("Введите имя клиента: ").strip()
+    client = input("Р’РІРµРґРёС‚Рµ РёРјСЏ РєР»РёРµРЅС‚Р°: ").strip()
     if not client:
-        client = "Без имени"
+        client = "Р‘РµР· РёРјРµРЅРё"
     order = create_order(cart, client, products)
-    print("\nЗаказ оформлен:")
+    print("\nР—Р°РєР°Р· РѕС„РѕСЂРјР»РµРЅ:")
     print_order(order)
 
 
 def show_orders_cli():
-    """Пункт 8: показать все заказы."""
+    """РџСѓРЅРєС‚ 8: РїРѕРєР°Р·Р°С‚СЊ РІСЃРµ Р·Р°РєР°Р·С‹."""
     if not orders:
-        print("Заказов пока нет.")
+        print("Р—Р°РєР°Р·РѕРІ РїРѕРєР° РЅРµС‚.")
         return
-    print("\n--- ВСЕ ЗАКАЗЫ ---")
+    print("\n--- Р’РЎР• Р—РђРљРђР—Р« ---")
     for o in orders:
         print_order(o)
         print()
 
 
 def analytics_cli():
-    """Пункт 9: аналитика."""
+    """РџСѓРЅРєС‚ 9: Р°РЅР°Р»РёС‚РёРєР°."""
     if not orders:
-        print("Заказов пока нет. Аналитика недоступна.")
+        print("Р—Р°РєР°Р·РѕРІ РїРѕРєР° РЅРµС‚. РђРЅР°Р»РёС‚РёРєР° РЅРµРґРѕСЃС‚СѓРїРЅР°.")
         return
-    print("\n--- АНАЛИТИКА ---")
-    print(f"Всего заказов: {len(orders)}")
-    print(f"Общая выручка: {total_revenue(orders)} руб.")
-    print(f"Средняя сумма заказа: {average_order_total(orders)} руб.")
-    print(f"Самый продаваемый товар: {best_selling_product(orders)}")
+    print("\n--- РђРќРђР›РРўРРљРђ ---")
+    print(f"Р’СЃРµРіРѕ Р·Р°РєР°Р·РѕРІ: {len(orders)}")
+    print(f"РћР±С‰Р°СЏ РІС‹СЂСѓС‡РєР°: {total_revenue(orders)} СЂСѓР±.")
+    print(f"РЎСЂРµРґРЅСЏСЏ СЃСѓРјРјР° Р·Р°РєР°Р·Р°: {average_order_total(orders)} СЂСѓР±.")
+    print(f"РЎР°РјС‹Р№ РїСЂРѕРґР°РІР°РµРјС‹Р№ С‚РѕРІР°СЂ: {best_selling_product(orders)}")
 
 
 def main():
-    """Главный цикл CLI (задание 10)."""
-    print("Добро пожаловать в магазин «СпортТовары»!")
+    """Р“Р»Р°РІРЅС‹Р№ С†РёРєР» CLI (Р·Р°РґР°РЅРёРµ 10)."""
+    print("Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ РІ РјР°РіР°Р·РёРЅ В«РЎРїРѕСЂС‚РўРѕРІР°СЂС‹В»!")
 
-    cart = []  # корзина CLI
+    cart = []  # РєРѕСЂР·РёРЅР° CLI
 
     while True:
         print_menu()
-        choice = safe_int_input("Ваш выбор: ", default=-1)
+        choice = safe_int_input("Р’Р°С€ РІС‹Р±РѕСЂ: ", default=-1)
 
         if choice == 1:
             show_catalog()
@@ -804,24 +804,24 @@ def main():
         elif choice == 0:
             if orders:
                 save_orders(orders)
-            print("До свидания!")
+            print("Р”Рѕ СЃРІРёРґР°РЅРёСЏ!")
             break
         else:
-            print("Неверный пункт меню. Попробуйте снова.")
+            print("РќРµРІРµСЂРЅС‹Р№ РїСѓРЅРєС‚ РјРµРЅСЋ. РџРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°.")
 
 
 # ============================================================
-# ЗАПУСК
+# Р—РђРџРЈРЎРљ
 # ============================================================
-# По заданию: демонстрации заданий 3–9 должны быть показаны.
-# Если раскомментировать строки ниже — увидишь весь вывод заданий.
-# Если оставить как есть — сразу запустится CLI (задание 10).
+# РџРѕ Р·Р°РґР°РЅРёСЋ: РґРµРјРѕРЅСЃС‚СЂР°С†РёРё Р·Р°РґР°РЅРёР№ 3вЂ“9 РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РїРѕРєР°Р·Р°РЅС‹.
+# Р•СЃР»Рё СЂР°СЃРєРѕРјРјРµРЅС‚РёСЂРѕРІР°С‚СЊ СЃС‚СЂРѕРєРё РЅРёР¶Рµ вЂ” СѓРІРёРґРёС€СЊ РІРµСЃСЊ РІС‹РІРѕРґ Р·Р°РґР°РЅРёР№.
+# Р•СЃР»Рё РѕСЃС‚Р°РІРёС‚СЊ РєР°Рє РµСЃС‚СЊ вЂ” СЃСЂР°Р·Сѓ Р·Р°РїСѓСЃС‚РёС‚СЃСЏ CLI (Р·Р°РґР°РЅРёРµ 10).
 #
-# ВНИМАНИЕ: демонстрация заданий 7–8 оформляет заказы и уменьшает остатки.
-# Поэтому запускать её лучше отдельно, а не перед CLI.
+# Р’РќРРњРђРќРР•: РґРµРјРѕРЅСЃС‚СЂР°С†РёСЏ Р·Р°РґР°РЅРёР№ 7вЂ“8 РѕС„РѕСЂРјР»СЏРµС‚ Р·Р°РєР°Р·С‹ Рё СѓРјРµРЅСЊС€Р°РµС‚ РѕСЃС‚Р°С‚РєРё.
+# РџРѕСЌС‚РѕРјСѓ Р·Р°РїСѓСЃРєР°С‚СЊ РµС‘ Р»СѓС‡С€Рµ РѕС‚РґРµР»СЊРЅРѕ, Р° РЅРµ РїРµСЂРµРґ CLI.
 
 if __name__ == '__main__':
-    # --- Демонстрация заданий 3–9 (раскомментируй при необходимости) ---
+    # --- Р”РµРјРѕРЅСЃС‚СЂР°С†РёСЏ Р·Р°РґР°РЅРёР№ 3вЂ“9 (СЂР°СЃРєРѕРјРјРµРЅС‚РёСЂСѓР№ РїСЂРё РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё) ---
     # demo_sorting()
     # demo_filtering()
     # demo_search()
@@ -829,7 +829,7 @@ if __name__ == '__main__':
     # demo_cart_and_orders()
     # demo_analytics()
     # save_orders(orders)
-    # print(f"Загружено заказов: {len(load_orders())}")
+    # print(f"Р—Р°РіСЂСѓР¶РµРЅРѕ Р·Р°РєР°Р·РѕРІ: {len(load_orders())}")
 
-    # --- Запуск CLI (задание 10) ---
+    # --- Р—Р°РїСѓСЃРє CLI (Р·Р°РґР°РЅРёРµ 10) ---
     main()
