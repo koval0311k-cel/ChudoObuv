@@ -833,3 +833,8 @@ if __name__ == '__main__':
 
     # --- Р—Р°РїСѓСЃРє CLI (Р·Р°РґР°РЅРёРµ 10) ---
     main()
+
+
+def total_sum(products):
+    """Версия 2: сумма цен с учётом количества."""
+    return sum(p['price'] * p['quantity'] for p in products)
